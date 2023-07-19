@@ -15,7 +15,7 @@ def calculate_stock_statistics(file1,file2,closing_price_fieldname1,closing_pric
             closing_price_lis = []
             returns_lis = []
             for index, line in enumerate(file):
-                if "," in line[closing_price_fieldname1]:
+                if "," in line[closing_price_fieldname]:
                     line = line[closing_price_fieldname].replace(",", "")
                 else:
                     line = line[closing_price_fieldname]    
@@ -54,7 +54,7 @@ def calculate_stock_statistics(file1,file2,closing_price_fieldname1,closing_pric
                 returns_lis_1.append(float(daily_returns))
                 
         for index, line in enumerate(file_2):
-            if "," in line[closing_price_fieldname1]:
+            if "," in line[closing_price_fieldname2]:
                 line = line[closing_price_fieldname2].replace(",", "")
             else:
                 line = line[closing_price_fieldname2] 
